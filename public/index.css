@@ -1,0 +1,6 @@
+.nav-wrapper {
+  padding: 0 2rem;
+}
+.active {
+  background-color: rgb(234, 62, 56);
+}

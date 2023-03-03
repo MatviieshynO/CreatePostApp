@@ -1,0 +1,25 @@
+<nav>
+  <div class='nav-wrapper'>
+    <a href='/' class='brand-logo'>AddPostApp</a>
+    <ul id='nav-mobile' class='right hide-on-med-and-down'>
+      {{#if isHome}}
+        <li><a href='/' class='active'>Home</a></li>
+      {{else}}
+        <li><a href='/'>Home</a></li>
+      {{/if}}
+
+      {{#if isPosts}}
+        <li><a href='/posts' class='active'>Posts</a></li>
+      {{else}}
+        <li><a href='/posts'>Posts</a></li>
+      {{/if}}
+
+      {{#if isAddpost}}
+        <li><a href='addpost' class='active'>Add</a></li>
+      {{else}}
+        <li><a href='addpost'>Add</a></li>
+      {{/if}}
+
+    </ul>
+  </div>
+</nav>
