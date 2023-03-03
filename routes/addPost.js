@@ -1,4 +1,5 @@
 const { Router } = require('express')
+const Post = require('../model/post')
 const router = Router()
 
 router.get('/', (req, res) => {
@@ -6,8 +7,15 @@ router.get('/', (req, res) => {
     title: 'addPost',
     isAddpost: true,
   })
-  router.post('/', (req, res) => {
-    console.log(req.body)
+  router.post('/', async (req, res) => {
+    const post = new Post(
+      req.body.FirstName,
+      req.body.LastName,
+      req.body.TitlePost,
+      req.body.BodyPost
+    )
+    await post.save()
+
     res.redirect('/posts')
   })
 })
