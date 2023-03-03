@@ -15,13 +15,13 @@ const hbs = expHBS.create({
 server.engine('hbs', hbs.engine)
 server.set('view engine', 'hbs')
 server.set('views', 'pages')
-
+//
+server.use(express.static('public'))
+server.use(express.urlencoded({ extended: true }))
 //Pages
 server.use('/', index)
 server.use('/posts', posts)
 server.use('/addpost', addPost)
-
-server.use(express.static('public'))
 
 server.listen(5000, () => {
   console.log('Server is runing on 3000 port')

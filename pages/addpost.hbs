@@ -1,1 +1,67 @@
-<h1>addpost</h1>
+<div class='row'>
+  <h3>Create your post</h3>
+  <form class='col s12 post-container' method='POST' action='/addpost'>
+
+    <div class='row' style='margin-top: 10px;'>
+      <div class='input-field col s6'>
+        <input
+          id='first_name'
+          type='text'
+          class='validate'
+          name='FirstName'
+          required
+        />
+        <label for='first_name'>Your first Name</label>
+        <span class='helper-text' data-error='✖' data-success='✔'></span>
+      </div>
+
+      <div class='input-field col s6'>
+        <input
+          id='last_name'
+          type='text'
+          class='validate'
+          name='LasttName'
+          required
+        />
+        <label for='last_name'>Your last Name</label>
+        <span class='helper-text' data-error='✖' data-success='✔'></span>
+      </div>
+    </div>
+
+    <div class='row'>
+    </div>
+    <div class='row'>
+      <div class='input-field col s12'>
+        <input
+          id='title'
+          type='text'
+          class='validate'
+          name='TitlePost'
+          required
+        />
+        <label for='title'>Post title</label>
+        <span class='helper-text' data-error='✖' data-success='✔'></span>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='input-field col s12'>
+        <input
+          id='body'
+          type='text'
+          class='validate'
+          name='BodyPost'
+          required
+        />
+        <label for='body'>The text of the post</label>
+        <span class='helper-text' data-error='✖' data-success='✔'></span>
+      </div>
+    </div>
+
+    <div class='button-form'>
+      <button class='btn waves-effect waves-light'>Send
+      </button>
+    </div>
+
+  </form>
+</div>
